@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <div *ngIf="article; else loading" class="card shadow-sm">
+      <div class="card-body">
+        <h1 class="card-title">{{ article.title }}</h1>
+        <h2 class="card-subtitle mb-2 text-muted">{{ article.subtitle }}</h2>
+  
+
+        <img *ngIf="article.image_data" 
+             [src]="'data:' + article.image_media_type + ';base64,' + article.image_data" 
+             alt="Image for {{ article.title }}" 
+             class="img-fluid mb-3">
+  
+        <p class="card-text">{{ article.abstract }}</p> 
+        <div [innerHTML]="article.body"></div> 
+        <p class="card-text"><strong>Category:</strong> {{ article.category }}</p>
+        <p class="card-text"><strong>Updated:</strong> {{ article.update_date }}</p>
+  
+        <button (click)="goBack()" class="btn btn-primary">Go Back</button>
+      </div>
+    </div>
+  
+    <ng-template #loading>
+      <div class="text-center">
+        <p class="text-muted">Loading article...</p>
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </ng-template>
+  
+    <p *ngIf="errorMessage" class="text-danger mt-3">{{ errorMessage }}</p>
+  </div>
+  

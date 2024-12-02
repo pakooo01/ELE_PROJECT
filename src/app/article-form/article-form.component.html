@@ -1,0 +1,52 @@
+<div class="article-form container mt-5">
+  <h2 class="text-center mb-4">Create Article</h2>
+  <form [formGroup]="articleForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    <!-- Title -->
+    <div class="form-group mb-3">
+      <label for="title" class="form-label">Title:</label>
+      <input id="title" formControlName="title" type="text" class="form-control" placeholder="Enter title" />
+    </div>
+
+    <!-- Subtitle -->
+    <div class="form-group mb-3">
+      <label for="subtitle" class="form-label">Subtitle:</label>
+      <input id="subtitle" formControlName="subtitle" type="text" class="form-control" placeholder="Enter subtitle" />
+    </div>
+
+    <!-- Abstract -->
+    <div class="form-group mb-3">
+      <label for="abstract" class="form-label">Abstract:</label>
+      <textarea id="abstract" formControlName="abstract" class="form-control" placeholder="Enter abstract" rows="3"></textarea>
+    </div>
+
+    <!-- Body -->
+    <div class="form-group mb-3">
+      <label for="body" class="form-label">Body:</label>
+      <textarea id="body" formControlName="body" class="form-control" placeholder="Enter article body" rows="5"></textarea>
+    </div>
+
+    <!-- Category select dropdown -->
+    <div class="form-group mb-3">
+      <label for="category" class="form-label">Category:</label>
+      <select id="category" formControlName="category" class="form-select">
+        <option value="">Select category</option>
+        <option value="National">National</option>
+        <option value="Sports">Sports</option>
+        <option value="Economy">Economy</option>
+        <option value="Technology">Technology</option>
+      </select>
+    </div>
+
+    <!-- File upload for both thumbnail_image and image_data -->
+    <div class="form-group mb-4">
+      <label for="image" class="form-label">Upload Image (for both thumbnail and main image):</label>
+      <input id="image" type="file" class="form-control" (change)="onFileSelected($event)" />
+    </div>
+
+    <!-- Submit and Go Back buttons -->
+    <div class="d-flex justify-content-between">
+      <button type="submit" class="btn btn-primary" [disabled]="articleForm.invalid">Create Article</button>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">Go Back</button>
+    </div>
+  </form>
+</div>

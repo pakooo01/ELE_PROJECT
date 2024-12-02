@@ -1,0 +1,91 @@
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Centra gli elementi della navbar */
+    background-color: #f8f9fa; /* Colore di sfondo */
+    margin-bottom: 20px; /* Spazio sotto la navbar */
+  }
+  
+  .nav-links li {
+    display: inline; /* Mantieni gli elementi della navbar in linea */
+  }
+  
+  .article-card {
+    border: 1px solid #ddd; /* Bordo attorno all'articolo */
+    border-radius: 5px; /* Angoli arrotondati */
+    padding: 10px; /* Spaziatura interna */
+    margin: 10px; /* Spaziatura esterna */
+    width: calc(33.33% - 20px); /* Tre articoli per riga */
+    display: inline-block; /* Permetti che gli articoli si allineino uno accanto all'altro */
+  }
+  
+  .articles-container {
+    display: flex; /* Usa Flexbox per la disposizione degli articoli */
+    flex-wrap: wrap; /* Permetti che gli articoli vadano a capo */
+  }
+
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Cambia in column per mobile */
+  }
+  
+  .navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-toggler {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar-collapse {
+    display: flex; /* Mostra il menu quando aperto */
+  }
+  
+  .collapse {
+    display: none; /* Nascondi il menu quando chiuso */
+  }
+  
+  .navbar-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin: 5px 0;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar {
+      flex-direction: row; /* Cambia in row per schermi più grandi */
+      justify-content: space-between;
+    }
+  
+    .navbar-links {
+      flex-direction: row;
+    }
+  
+    .navbar-links li {
+      margin: 0 15px;
+    }
+  }
+
+  .search-input {
+    width: 300px; /* Adjust the width as needed */
+}
+  
+  
