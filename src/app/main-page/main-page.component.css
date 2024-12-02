@@ -1,16 +1,92 @@
-.nav-links {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around; /* Centra gli elementi della navbar */
-    background-color: #f8f9fa; /* Colore di sfondo */
-    margin-bottom: 20px; /* Spazio sotto la navbar */
+.custom-navbar {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded corners for navbar */
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #007bff;
+}
+
+.navbar-toggler:hover {
+  background-color: #f8f9fa;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  padding: 8px 20px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px; /* Add spacing between categories */
+}
+
+.navbar-nav .nav-item .category-link {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px; /* Rounded corners for categories */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+}
+
+.navbar-nav .nav-item .category-link:hover {
+  background-color: #ffffff;
+  color: #007bff;
+  transform: scale(1.05); /* Slight zoom-in on hover */
+}
+
+.search-input {
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  padding: 5px 15px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 300px;
+}
+
+.search-input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .custom-navbar {
+    text-align: center;
   }
-  
-  .nav-links li {
-    display: inline; /* Mantieni gli elementi della navbar in linea */
+
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
-  
+
+  .search-input {
+    width: 100%;
+  }
+}
+
   .article-card {
     border: 1px solid #ddd; /* Bordo attorno all'articolo */
     border-radius: 5px; /* Angoli arrotondati */
@@ -26,7 +102,7 @@
   }
 
   .navbar {
-    background-color: #333;
+    background-color:#5caafc;
     color: white;
     padding: 10px;
     display: flex;
@@ -85,7 +161,7 @@
   }
 
   .search-input {
-    width: 300px; /* Adjust the width as needed */
+    width: 600px; /* Adjust the width as needed */
 }
   
   
