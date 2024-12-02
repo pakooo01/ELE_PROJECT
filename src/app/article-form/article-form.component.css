@@ -1,57 +1,108 @@
+/* Outer container styling */
+.form-container {
+  background-color: #44c3e6; /* Outer background color */
+  padding: 50px 20px; /* Adds spacing around the form */
+  min-height: 100vh; /* Makes it span the entire viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align the form to the top */
+}
+
+/* Inner form styling */
 .article-form {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .article-form h2 {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .form-label {
-    font-weight: 500;
-    color: #555;
-  }
-  
-  .form-control,
-  .form-select {
-    border-radius: 4px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-  }
-  
-  .btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #565e64;
-    border-color: #4e555b;
-  }
-  
-  .d-flex {
-    display: flex;
-  }
-  
-  .justify-content-between {
-    justify-content: space-between;
-  }
-  
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 10px; /* Rounded corners for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  padding: 30px; /* Inner spacing for form content */
+  max-width: 600px; /* Restricts form width */
+  width: 100%; /* Ensures responsiveness */
+  height: 80vh; /* Sets the form to take up 80% of the screen height */
+  overflow-y: auto; /* Enables vertical scrolling */
+  margin-bottom: 20px; /* Space at the bottom */
+    /* Hides the scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer, Edge */
+}
+
+
+.article-form h2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.article-form .form-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.article-form .form-control,
+.article-form .form-select {
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-form .form-control:focus,
+.article-form .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.article-form .form-control::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+.article-form .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.article-form .btn-primary {
+  background-color: #44c3e6;
+  background-color: #44c3e6;
+  color: white;
+}
+
+.article-form .btn-primary:hover {
+  background-color: #44c3e6;
+  background-color: #44c3e6;
+}
+
+.article-form .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+.article-form .btn-secondary:hover {
+  background-color: #565e64;
+  border-color: #565e64;
+}
+
+.article-form .form-group {
+  margin-bottom: 20px;
+}
+
+.article-form textarea {
+  resize: none;
+}
+
+.article-form input[type="file"] {
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.article-form .d-flex {
+  margin-top: 20px;
+}
+
+.article-form .btn + .btn {
+  margin-left: 15px;
+}
